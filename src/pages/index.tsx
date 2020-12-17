@@ -7,6 +7,7 @@ import Services from "../components/services"
 import AboutPanel from "../components/about-panel"
 import Testimonials from "../components/testimonials"
 import Articles from "../components/articles"
+import Projects from "../components/projects"
 import ThemeProvider from "@material-ui/styles/ThemeProvider"
 import theme from "../theme"
 import AppsPanel from "../components/apps-panel"
@@ -17,11 +18,12 @@ const IndexPage = () => (
       <Layout>
         <SEO title="Home" />
         <Hero />
-        <Services />
-        <AboutPanel />
-        <AppsPanel />
-        {/* <Testimonials /> */}
+        {/* <Services /> */}
+        {/* <AboutPanel /> */}
+        <Projects />
         <Articles />
+        {/* <AppsPanel /> */}
+        {/* <Testimonials /> */}
       </Layout>
     </ThemeProvider>
   </React.Fragment>

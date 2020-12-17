@@ -3,39 +3,26 @@ import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Box from "@material-ui/core/Box"
 import Hidden from "@material-ui/core/Hidden"
-import Link from "@material-ui/core/Link"
-import FabDownload from "./fab-download"
+import FooterLink from "./footer-link"
+// import Link from "@material-ui/core/Link"
+import { Link } from 'gatsby'
 
 const Footer = () => {
   const footerLinks = [
     {
-      title: "Company",
+      title: "marcovidonis.com",
       items: [
-        { displayText: "About", url: "" },
-        {
-          displayText: "Testimonials",
-          url: "",
-        },
-        { displayText: "Find a Doctor", url: "" },
-        { displayText: "Apps", url: "" },
+        { displayText: "Projects", url: "/my-projects" },
+        { displayText: "Articles",  url: "/my-articles" },
+        { displayText: "Contact Me", url: "/contactme" },
       ],
     },
     {
-      title: "Region",
+      title: "links",
       items: [
-        { displayText: "India", url: "" },
-        { displayText: "Indonesia", url: "" },
-        { displayText: "Singapore", url: "" },
-        { displayText: "Canada", url: "" },
-      ],
-    },
-    {
-      title: "Help",
-      items: [
-        { displayText: "Help Center", url: "" },
-        { displayText: "Contact Support", url: "" },
-        { displayText: "Instructions", url: "" },
-        { displayText: "How it works", url: "" },
+        { displayText: "CodePen", url: "https://codepen.io/marcovidonis" },
+        { displayText: "Twitter",  url: "https://twitter.com/marcovidonis" },
+        { displayText: "LinkedIn", url: "https://www.linkedin.com/in/marcovidonis/?locale=en_US" },
       ],
     },
   ]
@@ -48,7 +35,7 @@ const Footer = () => {
           style={{
             margin: `0 auto`,
             maxWidth: 960,
-            minHeight: 250,
+            minHeight: 150,
             color: "#FFF",
           }}
         >
@@ -58,45 +45,41 @@ const Footer = () => {
             item
             container
             direction="column"
-            justify="space-evenly"
+            justify="flex-start"
             style={{ padding: 10 }}
           >
-            <Typography variant="h4" color="inherit">
-              vHealth
+            <Typography variant="h5" color="inherit" style={{ marginBottom: 15 }}>
+              Made by Marco Vidonis
             </Typography>
             <Typography variant="body2" color="inherit">
-              vHealth provides progressive, and affordable healthcare,
-              accessible on mobile and online for everyone
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              ©vHealth PTY LTD 2020. All rights reserved
+              © 2020
             </Typography>
           </Grid>
 
-          <Hidden xsDown>
-            {footerLinks.map(footerMenu => (
-              <Grid
-                item
-                xs={12}
-                sm={2}
-                container
-                direction="column"
-                justify="space-evenly"
-                key={footerMenu.title}
-              >
-                <Typography variant="subtitle1" color="inherit">
-                  {footerMenu.title}
+          {footerLinks.map(footerMenu => (
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              container
+              direction="column"
+              justify="space-evenly"
+              style={{ padding: 10 }}
+              key={footerMenu.title}
+            >
+              <Typography variant="subtitle1" color="inherit">
+                {footerMenu.title}
+              </Typography>
+              {footerMenu.items.map(link => (
+                <Typography variant="body2" color="inherit" key={link.displayText}>
+                  <FooterLink url={link.url} displayText={link.displayText} />
                 </Typography>
-                {footerMenu.items.map(link => (
-                  <Link color="inherit" variant="body2" key={link.displayText}>
-                    {link.displayText}
-                  </Link>
-                ))}
-              </Grid>
-            ))}
-          </Hidden>
+              ))}
+            </Grid>
+          ))}
         </Grid>
       </Box>
+      {/*
       <Box className="attribution">
         <Grid
           container
@@ -132,8 +115,8 @@ const Footer = () => {
             </a>
           </Typography>
         </Grid>
-        <FabDownload />
       </Box>
+      */}
     </React.Fragment>
   )
 }

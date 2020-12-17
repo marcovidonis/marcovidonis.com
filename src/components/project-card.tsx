@@ -10,7 +10,7 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt"
 import { Link } from 'gatsby'
 
 interface IProps {
-  article: Article
+  project: Project
 }
 
 interface Image {
@@ -26,30 +26,30 @@ interface Field {
   slug: string
 }
 
-interface Article {
+interface Project {
   title: string
   frontmatter: Frontmatter
   excerpt: string
   fields: Field
 }
 
-const ArticleCard = ({ article, ...props }: IProps) => {
-  const imgPath: string = article.frontmatter.img.relativePath;
+const ProjectCard = ({ project, ...props }: IProps) => {
+  const imgPath: string = project.frontmatter.img.relativePath;
   return (
     <Card>
       <CardMedia image={imgPath}>
-        <Image alt={article.frontmatter.title} filename={imgPath} />
+        <Image alt={project.frontmatter.title} filename={imgPath} />
       </CardMedia>
       <CardContent style={{ textAlign: "start" }}>
         <Typography variant="h6" color="inherit">
-          {article.frontmatter.title}
+          {project.frontmatter.title}
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          {article.excerpt}
+          {project.excerpt}
         </Typography>
       </CardContent>
       <CardActions style={{ paddingLeft: 20 }}>
-        <Link to={article.fields.slug} color="inherit">
+        <Link to={project.fields.slug} color="inherit">
           <Button
             size="small"
             color="primary"
@@ -62,4 +62,4 @@ const ArticleCard = ({ article, ...props }: IProps) => {
   )
 }
 
-export default ArticleCard
+export default ProjectCard

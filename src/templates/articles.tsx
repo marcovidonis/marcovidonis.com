@@ -5,10 +5,47 @@ import Button from "@material-ui/core/Button"
 import ArticleCard from "./article-card"
 import Bar from "./bar"
 import { StaticQuery, graphql } from "gatsby"
-import { Link } from 'gatsby'
+
+
+// interface Article {
+//   id: string
+//   frontmatter: {
+//     [title: string]: string
+//   };
+//   fields: {
+//     [slug: string]: string
+//   }
+// }
+//
+// interface Articles {
+//   article: Article;
+// }
 
 
 const Articles = () => {
+  // const articles = [
+  //   {
+  //     title: "Disease detection, check up in the laboratory",
+  //     description:
+  //       "In this case, the role of the health laboratory is very important to do a disease detection...",
+  //     url: "",
+  //     image: "blog1.png",
+  //   },
+  //   {
+  //     title: "Herbal medicines that are safe for consumption",
+  //     description:
+  //       "Herbal medicine is very widely used at this time because of its very good for your health...",
+  //     url: "",
+  //     image: "blog2.png",
+  //   },
+  //   {
+  //     title: "Natural care for healthy facial skin",
+  //     description:
+  //       "A healthy lifestyle should start from now and also for your skin health. There are some...",
+  //     url: "",
+  //     image: "blog3.png",
+  //   },
+  // ];
   return(
     <StaticQuery
       query={graphql`
@@ -39,7 +76,7 @@ const Articles = () => {
 
         console.log(articles);
         return (
-          <Grid container spacing={3} style={{ textAlign: "center", marginTop: 25 }}>
+          <Grid container spacing={3} style={{ textAlign: "center" }}>
             <Grid
               item
               xs={12}
@@ -48,7 +85,7 @@ const Articles = () => {
               justify="center"
               alignItems="center"
             >
-              <Typography variant="h5">A little bit more about me</Typography>
+              <Typography variant="h5">Check out my latest articles</Typography>
               <Bar />
             </Grid>
             {articles.map(( article ) => (
@@ -58,11 +95,9 @@ const Articles = () => {
             ))}
 
             <Grid item xs={12}>
-              <Link to='/my-articles' color='inherit'>
-                <Button variant="outlined" color="primary" size="large">
-                  View All
-                </Button>
-              </Link>
+              <Button variant="outlined" color="primary" size="large">
+                View All
+              </Button>
             </Grid>
           </Grid>
         )

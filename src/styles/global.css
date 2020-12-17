@@ -1,0 +1,24 @@
+@import "color-styles.css";
+
+html {
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  margin: 0px;
+  background-color: #EEE;
+  font-family: sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--lightblue);
+}
+
+.highlight {
+  background-color: var(--lightblue);
+  border-bottom: 2px solid var(--darkblue);
+}

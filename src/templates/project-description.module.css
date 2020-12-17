@@ -1,0 +1,27 @@
+@import "../styles/color-styles.css";
+
+.post a {
+  color: var(--lightblue);
+}
+
+.post ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.post li{
+  margin-right: 10px;
+  font-size: 1em;
+  /* width: 85px; */
+  height: 1.25em;
+  /* line-height: 30px; */
+  text-align: center;
+  color: white;
+  background-color: var(--darkblue);
+  border-radius: 18px;
+  padding: 0 1em;
+  /*box-shadow: 2px 2px 3px darkgray;*/
+}

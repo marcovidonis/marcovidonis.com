@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import Image from "./image"
 import Hidden from "@material-ui/core/Hidden"
+import { Link } from 'gatsby'
 
 const Hero = () => {
   return (
@@ -18,17 +19,18 @@ const Hero = () => {
         alignItems="flex-start"
         style={{ paddingLeft: 40, paddingRight: 40 }}
       >
-        <Typography variant="h4" color="inherit" style={{ marginBottom: 20 }}>
-          Virtual Healthcare for you
+        <Typography variant="h2" color="inherit" style={{ marginBottom: 20 }}>
+          Hi, I'm Marco
         </Typography>
 
         <Typography variant="subtitle1" style={{ marginBottom: 30 }}>
-          We provide progressive, and affordable healthcare, accessible on
-          mobile and online for everyone
+          I'm a Front-End Web Developer in Leeds.
         </Typography>
-        <Button variant="contained" color="primary" size="large">
-          Consult Today
-        </Button>
+        <Link to='/contactme' color='inherit'>
+          <Button variant="contained" color="primary" size="large">
+            Let's chat
+          </Button>
+        </Link>
       </Grid>
       <Hidden xsDown>
         <Grid
