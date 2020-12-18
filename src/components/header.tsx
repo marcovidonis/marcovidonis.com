@@ -24,6 +24,17 @@ const useStyles = makeStyles(theme => ({
     color: "#233348",
     backgroundColor: "#FFF",
   },
+  appBarBottom: {
+    color: "#233348",
+    backgroundColor: "#FFF",
+    bottom: 0,
+    top: "90vh",
+    left: 0,
+    right: 0,
+    display: "flex",
+    justifyContent: "center",
+    borderTop: "3px solid #5a98f2"
+  },
   toolbar: {
     flexWrap: "wrap",
   },
@@ -58,28 +69,9 @@ const Header = ({ companyName }: Props) => {
 
   return (
     <React.Fragment>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
-          <Hidden smUp>
-            <IconButton
-              className={classes.drawerToggle}
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-          <Typography
-            variant="h6"
-            color="inherit"
-            className={classes.toolbarTitle}
-          >
-            marcovidonis.com
-          </Typography>
-
-          <Hidden xsDown>
+      <Hidden smUp>
+        <AppBar position="fixed" elevation={0} className={classes.appBarBottom}>
+          <Toolbar >
             {navLinks.map(item => (
               <Link to={item.link} key={item.displayText} color="inherit">
                 <Button color="primary">
@@ -87,9 +79,33 @@ const Header = ({ companyName }: Props) => {
                 </Button>
               </Link>
             ))}
-          </Hidden>
-        </Toolbar>
-      </AppBar>
+
+
+          </Toolbar>
+        </AppBar>
+      </Hidden>
+
+      <Hidden xsDown>
+        <AppBar position="static" elevation={0} className={classes.appBar}>
+          <Toolbar className={classes.toolbar}>
+            <Typography
+              variant="h6"
+              color="inherit"
+              className={classes.toolbarTitle}
+            >
+              marcovidonis.com
+            </Typography>
+
+            {navLinks.map(item => (
+              <Link to={item.link} key={item.displayText} color="inherit">
+                <Button color="primary">
+                  {item.displayText}
+                </Button>
+              </Link>
+            ))}
+          </Toolbar>
+        </AppBar>
+      </Hidden>
       <Drawer
         variant="temporary"
         anchor="left"

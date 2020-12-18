@@ -77,46 +77,24 @@ const Footer = () => {
               ))}
             </Grid>
           ))}
+
+          <Hidden smUp>
+            <Grid
+              item
+              sm={12}
+              container
+              direction="column"
+              justify="space-evenly"
+              style={{ padding: "10px 10px 10vh 10px" }}
+            >
+              <Typography variant="body2" color="inherit">
+                <div>Icons made by <FooterLink url={"https://www.flaticon.com/authors/freepik"} displayText={"Freepik"} /> from <FooterLink url={"https://www.flaticon.com/"} displayText={"www.flaticon.com"} /></div>
+              </Typography>
+            </Grid>
+          </Hidden>
+
         </Grid>
       </Box>
-      {/*
-      <Box className="attribution">
-        <Grid
-          container
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            color: "#FFF",
-            paddingLeft: 5,
-            paddingRight: 5,
-          }}
-          direction="row"
-          justify="space-between"
-          alignItems="center"
-        >
-          <Typography variant="body2" color="inherit">
-            Created by{" "}
-            <a
-              href="https://shantanudeshmukh.com/"
-              target="_blank"
-              style={{ color: "#FFF" }}
-            >
-              Shantanu Deshmukh
-            </a>
-          </Typography>
-          <Typography variant="body2" color="inherit">
-            Designed by
-            <a
-              href="https://dribbble.com/slabdsgn"
-              target="_blank"
-              style={{ color: "#FFF", margin: 5 }}
-            >
-              SLAB Design Studio
-            </a>
-          </Typography>
-        </Grid>
-      </Box>
-      */}
     </React.Fragment>
   )
 }
