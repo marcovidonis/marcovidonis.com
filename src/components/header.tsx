@@ -6,14 +6,13 @@ import Toolbar from "@material-ui/core/Toolbar"
 import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import { makeStyles } from "@material-ui/core/styles"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
 import Hidden from "@material-ui/core/Hidden"
-import Drawer from "@material-ui/core/Drawer"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemText from "@material-ui/core/ListItemText"
-import List from "@material-ui/core/List"
 import { Link } from 'gatsby'
+
+import HomeIcon from "../icons/home-icon.js"
+import CodeIcon from "../icons/code-icon.js"
+import ArticleIcon from "../icons/article-icon.js"
+import MailIcon from "../icons/mail-icon.js"
 
 interface Props {
   companyName: string
@@ -31,56 +30,48 @@ const useStyles = makeStyles(theme => ({
     top: "90vh",
     left: 0,
     right: 0,
-    display: "flex",
-    justifyContent: "center",
     borderTop: "3px solid #5a98f2"
   },
   toolbar: {
     flexWrap: "wrap",
   },
+  toolbarBottom: {
+    flexWrap: "wrap",
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
   toolbarTitle: {
     flexGrow: 1,
   },
-  drawerList: {
-    width: 250,
-  },
-  drawerToggle: {
-    padding: 20,
-  },
 }))
+
+const homeIcon = <HomeIcon />
+const codeIcon = <CodeIcon />
+const articleIcon = <ArticleIcon />
+const mailIcon = <MailIcon />
 
 const Header = ({ companyName }: Props) => {
   const classes = useStyles()
-  const [open, setOpen] = React.useState(false)
-
-  const handleDrawerOpen = () => {
-    setOpen(true)
-  }
-  const handleDrawerClose = () => {
-    setOpen(false)
-  }
 
   const navLinks = [
-    { displayText: "Home", link: "/" },
-    { displayText: "Projects", link: "/my-projects" },
-    { displayText: "Articles", link: "/my-articles" },
-    { displayText: "Contact Me", link: "/contactme" },
+    { displayText: "Home", link: "/", icon: homeIcon},
+    { displayText: "Projects", link: "/my-projects", icon: codeIcon },
+    { displayText: "Articles", link: "/my-articles", icon: articleIcon },
+    { displayText: "Contact Me", link: "/contactme", icon: mailIcon },
   ]
 
   return (
     <React.Fragment>
       <Hidden smUp>
         <AppBar position="fixed" elevation={0} className={classes.appBarBottom}>
-          <Toolbar className={classes.toolbar}>
+          <Toolbar className={classes.toolbarBottom}>
             {navLinks.map(item => (
               <Link to={item.link} key={item.displayText} color="inherit">
                 <Button color="primary">
-                  {item.displayText}
+                  {item.icon}
                 </Button>
               </Link>
             ))}
-
-
           </Toolbar>
         </AppBar>
       </Hidden>
