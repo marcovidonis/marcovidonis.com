@@ -71,7 +71,7 @@ const Header = ({ companyName }: Props) => {
     <React.Fragment>
       <Hidden smUp>
         <AppBar position="fixed" elevation={0} className={classes.appBarBottom}>
-          <Toolbar >
+          <Toolbar className={classes.toolbar}>
             {navLinks.map(item => (
               <Link to={item.link} key={item.displayText} color="inherit">
                 <Button color="primary">
@@ -106,24 +106,6 @@ const Header = ({ companyName }: Props) => {
           </Toolbar>
         </AppBar>
       </Hidden>
-      <Drawer
-        variant="temporary"
-        anchor="left"
-        open={open}
-        onEscapeKeyDown={handleDrawerClose}
-        onBackdropClick={handleDrawerClose}
-        ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
-        }}
-      >
-        <List className={classes.drawerList}>
-          {navLinks.map((item, index) => (
-            <ListItem button key={item.displayText}>
-              <ListItemText primary={item.displayText} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
     </React.Fragment>
   )
 }
