@@ -18,7 +18,7 @@ const Articles = () => {
         justify="center"
         alignItems="center"
       >
-        <Typography variant="h5">A little bit more about me</Typography>
+        <Typography variant="h5">A little bit more about myself</Typography>
         <Bar />
       </Grid>
 
