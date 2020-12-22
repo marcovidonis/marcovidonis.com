@@ -4,8 +4,6 @@ import Typography from "@material-ui/core/Typography"
 import Box from "@material-ui/core/Box"
 import Hidden from "@material-ui/core/Hidden"
 import FooterLink from "./footer-link"
-// import Link from "@material-ui/core/Link"
-import { Link } from 'gatsby'
 
 const Footer = () => {
   const footerLinks = [
@@ -85,7 +83,7 @@ const Footer = () => {
               container
               direction="column"
               justify="space-evenly"
-              style={{ padding: "10px 10px 10vh 10px" }}
+              style={{ padding: "10px 10px 15vh 10px" }}
             >
               <Typography variant="body2" color="inherit">
                 <div>Icons made by <FooterLink url={"https://www.flaticon.com/authors/freepik"} displayText={"Freepik"} /> from <FooterLink url={"https://www.flaticon.com/"} displayText={"www.flaticon.com"} /></div>

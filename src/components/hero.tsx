@@ -43,7 +43,7 @@ const Hero = () => {
           style={{ padding: 10 }}
         >
           <div style={{ width: "100%" }}>
-            <Image alt="Virtual Healthcare for you" filename="hero-image.png" />
+            <Image alt="Virtual Healthcare for you" filename="profile-pic.jpeg" />
           </div>
         </Grid>
       </Hidden>
