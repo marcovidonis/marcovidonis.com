@@ -38,7 +38,7 @@ const ArticlesDeck = ({ limit, ...props }: IProps) => {
         const articles = data.allMarkdownRemark.edges
 
         return (
-          <Grid container spacing={3} style={{ textAlign: "center" }}>
+          <Grid container spacing={3} style={{ textAlign: "center", margin: 0 }}>
 
             {articles.slice(0, limit).map(( article ) => (
               <Grid item xs={12} sm={4} key={article.node.id}>

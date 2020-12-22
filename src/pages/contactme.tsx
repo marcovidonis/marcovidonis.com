@@ -16,7 +16,7 @@ const ContactMe = () => (
           Fancy a chat?
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p" style={{ margin: "20px 0 100px 0 "}}>
-          Drop me a line at <a href="mailto:marco.vidonis@gmail.com">marco.vidonis@gmail.com</a>.
+          I'd love to hear from you! Just drop me a line at <a href="mailto:marco.vidonis@gmail.com" style={{ color: "#458FF6"}}>marco.vidonis@gmail.com</a>.
         </Typography>
 
       </Layout>

@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 
 const Hero = () => {
   return (
-    <Grid container spacing={3} style={{ minHeight: 500 }}>
+    <Grid container spacing={3} style={{ minHeight: 500, maxWidth: "100%" }}>
       <Grid
         item={true}
         xs={12}

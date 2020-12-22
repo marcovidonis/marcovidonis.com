@@ -15,7 +15,7 @@ export default function ProjectDescription({ data }) {
       <ThemeProvider theme={theme}>
         <Layout>
           <SEO title={post.frontmatter.title} />
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h4" color="inherit" style={{ margin: "50px 0 20px 0" }}>
               {post.frontmatter.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">

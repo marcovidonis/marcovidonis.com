@@ -26,8 +26,9 @@ const useStyles = makeStyles(theme => ({
   appBarBottom: {
     color: "#233348",
     backgroundColor: "#FFF",
+    height: 75,
+    top: "auto",
     bottom: 0,
-    top: "90vh",
     left: 0,
     right: 0,
     borderTop: "3px solid #5a98f2"

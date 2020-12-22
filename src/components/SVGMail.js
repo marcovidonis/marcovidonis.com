@@ -8,7 +8,7 @@ const SVGMail = () => {
       <svg
         id="gradient-path"
         version="1.1"
-        viewBox="0 0 400 300"
+        viewBox="0 0 460 300"
         width="350"
         height="180"
       >
