@@ -26,7 +26,7 @@ const Footer = () => {
   ]
 
   return (
-    <React.Fragment>
+    <footer>
       <Box className="footer">
         <Grid
           container
@@ -93,7 +93,7 @@ const Footer = () => {
 
         </Grid>
       </Box>
-    </React.Fragment>
+    </footer>
   )
 }
 export default Footer

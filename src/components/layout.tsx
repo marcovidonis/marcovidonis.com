@@ -30,19 +30,19 @@ const Layout = ({ children }: Props) => {
   `)
 
   return (
-    <React.Fragment>
+    <div style={{ minHeight: "100vh", position: "relative" }}>
       <Header />
       <Box
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `0 1.0875rem 12rem`,
         }}
       >
         {children}
       </Box>
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 
