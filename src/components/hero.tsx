@@ -5,10 +5,16 @@ import Button from "@material-ui/core/Button"
 import Image from "./image"
 import Hidden from "@material-ui/core/Hidden"
 import { Link } from 'gatsby'
+import styles from "./hero.module.css"
 
 const Hero = () => {
   return (
-    <Grid container spacing={3} style={{ minHeight: 500, maxWidth: "100%" }}>
+    <Grid
+      container
+      spacing={3}
+      style={{ minHeight: 500, maxWidth: "100%" }}
+      className={styles.container}
+    >
       <Grid
         item={true}
         xs={12}
@@ -32,21 +38,21 @@ const Hero = () => {
           </Button>
         </Link>
       </Grid>
-      <Hidden xsDown>
-        <Grid
-          item={true}
-          sm={6}
-          container
-          direction="column"
-          justify="center"
-          alignItems="flex-start"
-          style={{ padding: 10 }}
-        >
-          <div style={{ width: "100%" }}>
-            <Image alt="Virtual Healthcare for you" filename="profile-pic.jpeg" />
-          </div>
-        </Grid>
-      </Hidden>
+
+      <Grid
+        item={true}
+        sm={6}
+        direction="column"
+        justify="center"
+        alignItems="center"
+        className={styles.picture}
+        style={{ padding: 10 }}
+      >
+        <div style={{ width: "100%" }}>
+          <Image alt="Marco's profile picture." filename="profile-pic.jpeg" />
+        </div>
+      </Grid>
+
     </Grid>
   )
 }
