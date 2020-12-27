@@ -17,6 +17,6 @@ I had fun designing the screen, with a dot-matrix LCD effect, and the push butto
 [See it live on CodePen](https://codepen.io/marcovidonis/full/JjGjagY).
 
 
-- React
 - HTML
 - Sass
+- React
