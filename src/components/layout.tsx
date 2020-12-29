@@ -36,8 +36,11 @@ const Layout = ({ children }: Props) => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 12rem`,
+          paddingTop: 0,
+          paddingLeft: `1.0875rem`,
+          paddingRight: `1.0875rem`,
         }}
+        className="main-content"
       >
         {children}
       </Box>

@@ -44,6 +44,7 @@ I wanted to add a little bit of fun here with an animated SVG icon. I drew a ver
 * **Material-UI.** Another first for me. The thing I like most about it is probably the ripple effect on buttons. However, there are quite a few things that I don't fully understand:
   * Too many components..! Do I really need `Hidden`, `Grid` and `Box`?
   * Why Bootstrap?
+  * `ThemeProvider`: Personally, this feels to me like it could just be a global CSS file. But maybe I should just read the docs...
 
   Since the template I chose was heavily based on Material-UI, I decided to keep it as it is. After all, the UI is the very reason why I chose this template! However, for my future projects, I think I'll go for a more minimalistic approach, importing just the components I need and handling the rest with CSS.
 

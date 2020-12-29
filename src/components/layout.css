@@ -14,8 +14,12 @@ footer {
   right: 0;
 }
 
-.attribution {
-background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 100%);
-  /* background: #2b8bee; */
-  padding: 5px;
+.main-content {
+  padding-bottom: 12rem;
+}
+
+@media(max-width: 600px) {
+  .main-content {
+    padding-bottom: 25rem;
+  }
 }
