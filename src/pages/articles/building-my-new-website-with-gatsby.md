@@ -7,7 +7,7 @@ type: "article"
 
 I've wanted to give static site generators a try for a while now. Here's why I chose Gatsby for the latest iteration of my website, and a few of the things I learnt in the process.
 
-I started my design from [this template](https://github.com/shantanu-deshmukh/vhealth-gatsby), so I would have a good starting point for the design. I chose this template because it looked clean and modern, and it had a few of the elements I knew I'd need, such as project cards. I also knew there would be space for personalisation: Adding the articles section, creating all secondary pages, and modifying site navigation (more on this below).
+I started my design from [this template](https://github.com/shantanu-deshmukh/vhealth-gatsby), so I would have a good starting point for the design. I chose the vHealth template because it looked clean and modern, and it had a few of the elements I knew I'd need, such as project cards. I also knew there would be space for personalisation: Adding the articles section, creating all secondary pages, and modifying site navigation (more on this below).
 
 
 ## Why Gatsby
@@ -50,7 +50,7 @@ I wanted to add a little bit of fun here with an animated SVG icon. I drew a ver
 
 
 ## Conclusions
-The new site is *fast*. Not that the old version was slow: It was made in plain HTML and CSS. But the benefits of Gatsby are clear: Lazy image loading and super quick links between pages of the site come free with Gatsby.
+The new site is *fast*. Not that the old version was slow: It was made in plain HTML and CSS, after all. But the benefits of Gatsby are clear: Lazy image loading, super quick links between pages of the site and hot reloading in development all come free with Gatsby.
 
 I'll admit the infrastructure for such a small site feels a bit overkill. However, being able to use components and to automatically create pages from Markdown files makes updating the website so much easier.
 
