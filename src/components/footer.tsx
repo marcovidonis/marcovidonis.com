@@ -50,7 +50,7 @@ const Footer = () => {
               Made by Marco Vidonis
             </Typography>
             <Typography variant="body2" color="inherit">
-              © 2020
+              © 2021
             </Typography>
           </Grid>
 
