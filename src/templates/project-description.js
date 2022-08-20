@@ -18,7 +18,7 @@ export default function ProjectDescription({ data }) {
             <Typography variant="h4" color="inherit" style={{ margin: "50px 0 20px 0" }}>
               {post.frontmatter.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" color="textSecondary" component="div">
               <div
                 className={styles.post}
                 dangerouslySetInnerHTML={{ __html: post.html }}
