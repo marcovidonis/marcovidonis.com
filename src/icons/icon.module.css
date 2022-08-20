@@ -1,7 +1,0 @@
-@import "../styles/color-styles.css";
-
-.container path {
-  fill: var(--lightblue);
-  stroke: var(--lightblue);
-  /* stroke-width: 5; */
-}

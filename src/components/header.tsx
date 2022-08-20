@@ -1,18 +1,23 @@
+//@ts-nocheck
 import PropTypes from "prop-types"
 import React from "react"
 
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
+import {
+  AppBar,
+  Button,
+  Hidden,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@material-ui/core"
+
 import { makeStyles } from "@material-ui/core/styles"
-import Hidden from "@material-ui/core/Hidden"
 import { Link } from 'gatsby'
 
-import HomeIcon from "../icons/home-icon.js"
-import CodeIcon from "../icons/code-icon.js"
-import ArticleIcon from "../icons/article-icon.js"
-import MailIcon from "../icons/mail-icon.js"
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import CodeIcon from '@material-ui/icons/Code';
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import MailOutlinedIcon from '@material-ui/icons/MailOutlined';
 
 interface Props {
   companyName: string
@@ -26,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   appBarBottom: {
     color: "#233348",
     backgroundColor: "#FFF",
-    height: 75,
+    height: 60,
     top: "auto",
     bottom: 0,
     left: 0,
@@ -44,18 +49,24 @@ const useStyles = makeStyles(theme => ({
   toolbarTitle: {
     flexGrow: 1,
   },
+  iconButton: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 }))
 
-const homeIcon = <HomeIcon />
-const codeIcon = <CodeIcon />
-const articleIcon = <ArticleIcon />
-const mailIcon = <MailIcon />
+const homeIcon = <HomeOutlinedIcon fontSize="default" />
+const codeIcon = <CodeIcon fontSize="default" />
+const articleIcon = <DescriptionOutlinedIcon />
+const mailIcon = <MailOutlinedIcon />
 
 const Header = ({ companyName }: Props) => {
   const classes = useStyles()
 
   const navLinks = [
-    { displayText: "Home", link: "/", icon: homeIcon},
+    { displayText: "Home", link: "/", icon: homeIcon },
     { displayText: "Projects", link: "/my-projects", icon: codeIcon },
     { displayText: "Articles", link: "/my-articles", icon: articleIcon },
     { displayText: "Contact Me", link: "/contactme", icon: mailIcon },
@@ -68,9 +79,14 @@ const Header = ({ companyName }: Props) => {
           <Toolbar className={classes.toolbarBottom}>
             {navLinks.map(item => (
               <Link to={item.link} key={item.displayText} color="inherit">
-                <Button color="primary">
-                  {item.icon}
-                </Button>
+                <IconButton color="primary" style={{ padding: 1 }}>
+                  <div className={classes.iconButton}>
+                    {item.icon}
+                    <Typography variant="caption" display="block" align="center">
+                      {item.displayText}
+                    </Typography>
+                  </div>
+                </IconButton>
               </Link>
             ))}
           </Toolbar>

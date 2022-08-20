@@ -1,9 +1,9 @@
+//@ts-nocheck
 import React from "react"
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
+
+import { Button, Grid, Typography } from "@material-ui/core"
+
 import Image from "./image"
-import Hidden from "@material-ui/core/Hidden"
 import { Link } from 'gatsby'
 import styles from "./hero.module.css"
 
@@ -30,7 +30,7 @@ const Hero = () => {
         </Typography>
 
         <Typography variant="subtitle1" style={{ marginBottom: 30 }}>
-          I'm a Front-End Web Developer in Leeds.
+          I'm a Web Developer in Leeds.
         </Typography>
         <Link to='/contactme' color='inherit'>
           <Button variant="contained" color="primary" size="large">
@@ -42,9 +42,6 @@ const Hero = () => {
       <Grid
         item={true}
         sm={6}
-        direction="column"
-        justify="center"
-        alignItems="center"
         className={styles.picture}
         style={{ padding: 10 }}
       >

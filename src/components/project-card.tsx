@@ -38,7 +38,9 @@ const ProjectCard = ({ project, ...props }: IProps) => {
   return (
     <Card>
       <CardMedia image={imgPath}>
-        <Image alt={project.frontmatter.title} filename={imgPath} />
+        <Link to={project.fields.slug}>
+          <Image alt={project.frontmatter.title} filename={imgPath} />
+        </Link>
       </CardMedia>
       <CardContent style={{ textAlign: "start" }}>
         <Typography variant="h6" color="inherit">

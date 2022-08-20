@@ -46,11 +46,8 @@ const Footer = () => {
             justify="flex-start"
             style={{ padding: 10 }}
           >
-            <Typography variant="h5" color="inherit" style={{ marginBottom: 15 }}>
-              Made by Marco Vidonis
-            </Typography>
-            <Typography variant="body2" color="inherit">
-              © 2021
+            <Typography variant="body1" color="inherit" style={{ marginBottom: 15 }}>
+              Made with ☕️ by Marco Vidonis
             </Typography>
           </Grid>
 
@@ -75,22 +72,6 @@ const Footer = () => {
               ))}
             </Grid>
           ))}
-
-          <Hidden smUp>
-            <Grid
-              item
-              sm={12}
-              container
-              direction="column"
-              justify="space-evenly"
-              style={{ padding: "10px 10px 15vh 10px" }}
-            >
-              <Typography variant="body2" color="inherit">
-                <div>Icons made by <FooterLink url={"https://www.flaticon.com/authors/freepik"} displayText={"Freepik"} /> from <FooterLink url={"https://www.flaticon.com/"} displayText={"www.flaticon.com"} /></div>
-              </Typography>
-            </Grid>
-          </Hidden>
-
         </Grid>
       </Box>
     </footer>
